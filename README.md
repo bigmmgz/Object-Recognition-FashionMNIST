@@ -1,27 +1,26 @@
 # Object Recognition - Xiaohan Sun -s5321302
 
+
 ## Abstract
-The input image is used to recognize the features in the image using the CNN architecture system and to classify the objects in the image.
+Image recognition is a technique that uses computers to process and analyse images in order to recognise various different patterns of pairs of images. The goal of this project is to apply neural networks to feature recognition of input clothing images and classify them based on the FashionMNIST dataset.
 
 
 ## Detailed Description
-Image data consisting of multiple channels is fed into a convolutional neural network, and after multiple convolution, pooling and activation, the data features are extracted. The output is then passed through a fully connected layer to complete the forward propagation process. The parameters are then updated in the back propagation by calculating the loss between the predicted value and the true value. This step is repeated until a model with better recognition results is trained.
+For this project, I will use convolutional neural networks to build image classification models. After several convolutions, pooling and activations, the data features are extracted. The output is then passed through a fully connected layer, completing the forward propagation process. Finally the parameters are updated in the backward propagation by calculating the loss between the predicted and true values. This step is repeated until a model with good recognition is trained, allowing the model to distinguish ten different categories of item images into their respective categories.
+
 
 ### Datasets
-The CIFAR-10 dataset contains 60,000 colour images, divided into 10 categories. Of these, 50,000 are training images and the remaining 10,000 are test images.
+I will use the FashionMNIST dataset, a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 greyscale image associated with 10 categories of labels. The dataset can be found at: https://github.com/zalandoresearch/fashion-mnist
 
-https://www.cs.toronto.edu/~kriz/cifar.html
 
 ### Arcitecture Proposal
-1.Input training samples and process the data.
+First I built a base neural network for training tests, on top of which I adjusted the parameters and built a larger and deeper convolutional neural network. The steps are divided into five main steps.
+1. Input training samples and pre-process the data.
+2. Build the convolutional neural network.
+3. Set up the optimiser and calculate the loss function.
+4. Update the parameters.
+5. Evaluate the model.
 
-2.Construct convolutional neural network.
-
-3.Set the optimizer and calculate the loss function.
-
-4.Update parameters.
-
-5.Evaluate the model.
 
 ## References
 [1]Learning Multiple Layers of Features from Tiny Images，Alex Krizhevsky，2009
